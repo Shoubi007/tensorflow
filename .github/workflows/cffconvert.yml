@@ -20,12 +20,9 @@ on:
     paths:
       - CITATION.cff
 
-permissions:
-  contents: read
-
 jobs:
   validate:
-    if: github.repository == 'tensorflow/tensorflow' # Don't do this in forks
+    if: github.repository == 'Shoubi007/tensorflow' # Don't do this in forks
     name: "validate"
     runs-on: ubuntu-latest
     steps:
