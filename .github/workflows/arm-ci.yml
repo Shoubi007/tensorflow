@@ -45,7 +45,7 @@ jobs:
             echo "Running container(s) found" && \
             docker stop $running_containers;
           fi
-
+            docker container prune -f
       - name: Clean repository
         shell: bash
         run: find /home/parallels/actions-runner/_work/tensorflow/tensorflow/. -name . -o -prune -exec sudo rm -rf -- {} + || true
